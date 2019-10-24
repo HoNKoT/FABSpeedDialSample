@@ -24,6 +24,15 @@ class MainActivity : AppCompatActivity(), SpeedDialView.OnActionSelectedListener
             setOnActionSelectedListener(this@MainActivity)
         }
 
+        // add manually
+        binding.speedDial.addActionItem(SpeedDialActionItem.Builder(R.id.action_menu_5, R.drawable.ic_add)
+            .setFabBackgroundColor(ResourcesCompat.getColor(resources, R.color.colorPrimaryDark, theme))
+            .setFabImageTintColor(ResourcesCompat.getColor(resources, android.R.color.white, theme))
+            .setLabel(getString(R.string.fab_icon_menu_5))
+            .setLabelColor(Color.BLUE)
+            .setFabSize(0)
+            .setLabelClickable(false)
+            .create())
     }
 
     fun onClickedCustomFAB(@Suppress("UNUSED_PARAMETER") view: View) {
