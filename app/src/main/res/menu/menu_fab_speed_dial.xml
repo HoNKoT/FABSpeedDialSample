@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_menu_1"
+        android:orderInCategory="10"
+        android:title="@string/fab_icon_menu_1"
+        android:icon="@drawable/ic_add"
+        />
+
+    <item
+        android:id="@+id/action_menu_2"
+        android:orderInCategory="10"
+        android:title="@string/fab_icon_menu_2"
+        android:icon="@drawable/ic_add"
+        />
+
+    <item
+        android:id="@+id/action_menu_3"
+        android:orderInCategory="10"
+        android:title="@string/fab_icon_menu_3"
+        android:icon="@drawable/ic_add"
+        />
+
+    <item
+        android:id="@+id/action_menu_4"
+        android:orderInCategory="10"
+        android:title="@string/fab_icon_menu_4"
+        android:icon="@drawable/ic_add"
+        />
+
+</menu>
