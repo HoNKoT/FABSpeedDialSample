@@ -3,6 +3,7 @@ package jp.honkot.fabspeeddialsample
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
@@ -23,6 +24,12 @@ class MainActivity : AppCompatActivity(), SpeedDialView.OnActionSelectedListener
             setOnActionSelectedListener(this@MainActivity)
         }
 
+    }
+
+    fun onClickedCustomFAB(@Suppress("UNUSED_PARAMETER") view: View) {
+        binding.customFAB.visibility = View.GONE
+        binding.speedDial.visibility = View.VISIBLE
+        binding.speedDial.open()
     }
 
     override fun onActionSelected(actionItem: SpeedDialActionItem?): Boolean {
@@ -48,6 +55,8 @@ class MainActivity : AppCompatActivity(), SpeedDialView.OnActionSelectedListener
         }
 
         if (ret) {
+            binding.customFAB.visibility = View.VISIBLE
+            binding.speedDial.visibility = View.GONE
             binding.speedDial.close()
         }
 
