@@ -6,7 +6,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
         tools:context=".MainActivity">
 
         <TextView
@@ -18,6 +17,12 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorOverlay" />
+
         <com.leinardi.android.speeddial.SpeedDialView
             android:id="@+id/speedDial"
             android:layout_width="wrap_content"
@@ -26,7 +31,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:sdMainFabClosedBackgroundColor="@color/colorPrimary"
-            app:sdMainFabClosedSrc="@drawable/ic_add" />
+            app:sdMainFabClosedSrc="@drawable/ic_add"
+            app:sdOverlayLayout="@id/overlay" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/customFAB"
